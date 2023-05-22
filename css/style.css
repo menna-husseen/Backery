@@ -1,0 +1,360 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #f5f5f5;
+  color: #4e4e4e;
+  overflow: hidden;
+}
+
+#slideBar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 66666666666666666666;
+  display: flex;
+}
+.slide-inner {
+  background-color:rgba(87, 152, 144, 0.825);
+  padding: 5px;
+}
+#slideBar i {
+  align-self: self-start;
+  transform: translateY(150%);
+  color: #fff;
+  background-color: crimson;
+  padding: 10px;
+  cursor: pointer;
+}
+.color-box{
+  background-color: blue ;
+  width: 30px;
+  height: 30px;
+  display:inline-block;
+}
+
+#loading {
+  background-color: rgb(190, 64, 18);
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 999999999999999999;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+
+  margin: 300px auto;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% {
+    -webkit-transform: perspective(120px);
+  }
+  50% {
+    -webkit-transform: perspective(120px) rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg);
+  }
+}
+
+@keyframes sk-rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+.main-color {
+  color: #0078ff;
+}
+#home h2::after {
+  content: "|";
+  animation-name: typing;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes typing {
+  0% {
+    content: "D|";
+  }
+  15% {
+    content: "De|";
+  }
+  20% {
+    content: "Des|";
+  }
+  25% {
+    content: "Desi|";
+  }
+  30% {
+    content: "Desig|";
+  }
+  35% {
+    content: "Design|";
+  }
+  40% {
+    content: "Designe|";
+  }
+  45% {
+    content: "Designer|";
+  }
+  50% {
+    content: "Designe|";
+  }
+  55% {
+    content: "Design|";
+  }
+  60% {
+    content: "Desig|";
+  }
+  65% {
+    content: "Desi|";
+  }
+  70% {
+    content: "Des|";
+  }
+  80% {
+    content: "De|";
+  }
+  90% {
+    content: "D|";
+  }
+  100% {
+    content: "|";
+  }
+}
+
+nav .nav-item a::after {
+  content: "";
+  width: 1px;
+  height: 1px;
+  background-color: #0078ff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: 1s;
+}
+.navbar {
+  transition: background-color 2s;
+}
+nav .nav-item a {
+  margin-right: 10px;
+  padding-left: 0 !important;
+  width: 80px;
+}
+nav .nav-item a:hover::after {
+  opacity: 9;
+  width: 30px;
+}
+
+nav .nav-item .active::after {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background-color: #0078ff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 9;
+}
+header {
+  background-image: url(../images/intro-bg.jpgjnkjn.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+#about img {
+  width: 80%;
+  border-radius: 3px;
+}
+
+#about ul li {
+  list-style: none;
+}
+
+#about .card {
+  width: 65% !important;
+}
+
+.title-1::after {
+  content: "";
+  width: 10%;
+  height: 2px;
+  background-color: #0078ff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.title::after {
+  content: "";
+  width: 45px;
+  height: 3px;
+  background-color: #0078ff;
+  position: absolute;
+  bottom: 0;
+  left: 48%;
+}
+.icon {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  padding: 30px;
+  font-size: 20px;
+  box-shadow: 0 0 0 8px #0078ff;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+}
+.card:hover .icon {
+  background-color: #0078ff;
+  box-shadow: 0 0 0 8px #0077ff33;
+  color: white;
+}
+#btnUp {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999999999999;
+  display: none;
+}
+
+.info {
+  background-image: url(../images/post-3.jpg);
+  background-position: center;
+  background-attachment: fixed;
+}
+.layer {
+  background-color: #0077ff60;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.info .icon {
+  width: 30px;
+  height: 30px;
+  margin: 30px auto;
+  padding: 25px;
+  font-size: 25px;
+  box-shadow: 0 0 0 8px #ffffff91;
+  background-color: transparent;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+}
+
+#portfolio .card img {
+  transition: 1s;
+}
+#portfolio .card:hover img {
+  transform: scale(1.3);
+}
+
+.back-img {
+  background-image: url(../images/overlay-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.slid img {
+  width: 20%;
+  border-radius: 50%;
+}
+.potfolio-icon {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #0078ff;
+}
+
+ul a img {
+  width: 35px;
+  border-radius: 50%;
+}
+
+.caption {
+  background-color: #0078ff;
+  width: 30%;
+  color: white;
+  position: absolute;
+  top: 95%;
+  left: 35%;
+  border-radius: 5px;
+  text-align: center;
+}
+.card-body .icons .icon {
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  padding: 10px;
+  font-size: 20px;
+  box-shadow: 0 0 0 5px #0078ff;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+.card-body .icons .icon:hover {
+  background-color: #0078ff;
+  box-shadow: 0 0 0 8px #0077ff33;
+  color: white;
+}
+form .btn-1 {
+  background-color: #0078ff;
+  border: 5px solid #0078ff;
+  color: white;
+  font-size: 18px;
+}
+form .btn-1:hover {
+  box-shadow: 0 0 10px gray;
+}
+
+.up {
+  width: 30px;
+  height: 30px;
+  background-color: #0078ff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
